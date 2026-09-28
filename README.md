@@ -1,7 +1,10 @@
 ## Introduction 
-
-
-
+During this scenario, I conducted a DFIR investigation using Splunk logs and the PCAP network traffic to detect and confirm the attacker’s presence and identify IOCs:
+-	Documented the key findings,
+-	Mapped the attacker’s activities to the cyber kill chain and the findings to MITRE ATT&CK with a detailed timeline and supporting evidence 
+-	Reconstructed the attacker’s activities :
+Phishing: (malicious attachment) --> Discovery: (privilege escalation vulnerabilities) --> credential access --> Discovery: (network shares and Wi-Fi) --> Security control tampering --> Exfiltration --> Evidence removal 
+-	Provided recommendations for each identified finding
 ## Executive summury
 On approximately 28/07/2028 at 10:43:53 UTC the host DESKTOP-2A1O8LD was subjected to GoldenPhantom_APT_Attack_Operation attack.
 The attacker obtained initial access via the download of a malicious attachment delivered through phishing. The attachment silently performed enumeration activities including privilege escalation vulnerabilities, Wi-Fi scanning and all network shares. Additionally, it extracted user credentials and hashes, attempted to forge a Golden Ticket and to impersonate Domain controller behavior to request password hashes and other sensitive information.
@@ -10,7 +13,7 @@ Finally, the attacker attempted to exfiltrate collected information to an unauth
 #### Severity assessment: critical 
 #### Affected assets 
 -	Hostname: DESKTOP-2A1O8LD 
--	 IP address:192.168.67.140
+-	IP address:192.168.67.140
 -	MAC address:00:0c:29:e5:73:d4 
 -	Domain: anmar 
 -	Operating system: 64-bit Windows 10 (22H2), build 19045
